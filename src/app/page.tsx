@@ -10,7 +10,7 @@ export default function Home() {
           <code className={styles.code}>src/app/page.tsx</code>
           
         </p>
-        <h1>From Hieunv</h1>
+        <h1>From Hieunv.dev</h1>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
