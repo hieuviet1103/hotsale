@@ -1,0 +1,36 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5%;
+    padding: 3%;
+    min-height: 100vh;
+    border: 5px solid #b3cfee70 ;
+    border-radius: 10px;
+  }
+
+.voucher-dealcoupon{
+    ::before{
+        margin-left: 200px;
+    }
+
+    ::after{
+        margin-right: 200px;
+    }
+}
+
+.title-tabs{
+    display: flex;
+    justify-content: space-between;
+    background-color: #7fb7f770;
+    padding: 10px;
+    margin: -10px;
+    border-radius: 10px;
+    &--type{
+        display: flex;
+        justify-content: space-around;
+        min-width: 200px;
+        
+    }
+}
+
