@@ -1,36 +1,78 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 5%;
-    padding: 3%;
-    min-height: 100vh;
-    border: 5px solid #b3cfee70 ;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5%;
+  padding: 3%;
+  min-height: 100vh;
+  border: 5px solid #b3cfee70;
+  border-radius: 10px;
+}
+
+.voucher-dealcoupon {
+  ::before {
+    margin-left: 200px;
   }
 
-.voucher-dealcoupon{
-    ::before{
-        margin-left: 200px;
-    }
-
-    ::after{
-        margin-right: 200px;
-    }
+  ::after {
+    margin-right: 200px;
+  }
 }
 
-.title-tabs{
+.title-tabs {
+  display: flex;
+  justify-content: space-between;
+  //background-color: #7fb7f770;
+  padding: 10px;
+  margin: -10px;
+  border-bottom: 2px solid;
+  &--type {
     display: flex;
-    justify-content: space-between;
-    background-color: #7fb7f770;
-    padding: 10px;
-    margin: -10px;
-    border-radius: 10px;
-    &--type{
-        display: flex;
-        justify-content: space-around;
-        min-width: 200px;
-        
+    justify-content: space-around;
+    min-width: 200px;
+
+    &-item {
+      cursor: pointer;
+
+      &--active {
+        color: blue;
+        font-weight: bold;
+        border-bottom: 2px solid blue;
+      }
     }
+  }
 }
 
+.tab-content {
+  .dealpromo-body {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;;
+    min-height: 500px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+
+    .dealpromo-row {
+      display: flex;
+      flex-direction: row;
+
+      justify-content: space-between;
+
+      margin: 10px;
+      background-color: blue;
+      min-height: 100px;
+
+
+      
+    }
+
+    .dealpromo-item {
+        flex:1;
+        margin: 20px;
+        min-height: 120px;
+        background-color: red;
+        border-radius: 10px;
+      }
+  }
+}
