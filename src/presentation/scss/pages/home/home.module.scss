@@ -1,9 +1,9 @@
 .main {
-  min-width: 400px;
+  min-width: 255px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5%;
+  margin: 2%;
   padding: 3%;
   min-height: 100vh;
   border: 5px solid #b3cfee70;
@@ -47,8 +47,8 @@
 .tab-content {
   .dealpromo-body {
     margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+    //margin-left: 50px;
+    //margin-right: 50px;
     min-height: 500px;
     background-color: yellow;
     display: flex;
@@ -72,7 +72,9 @@
   }
 }
 
-@media screen and (max-width: 600px)  {        
+@media screen and (max-width: 600px)  {      
+  
+  
   .title-tabs{
     flex-direction: column;
     &--type{
