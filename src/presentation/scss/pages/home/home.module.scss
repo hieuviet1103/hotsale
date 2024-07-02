@@ -62,22 +62,28 @@
       border-radius: 10px;
       border: solid blue;
       margin: 5px 0;
-      .dealpromo-item-card{   
-        margin: 20px 10px; 
+      .dealpromo-item-card {
+        margin: 20px 10px;
         min-height: 120px;
         background-color: red;
-        
       }
     }
   }
 }
 
-@media screen and (max-width: 600px)  {      
-  
-  
-  .title-tabs{
+@media screen and (min-width: 650px) {
+  .tab-content {
+    .dealpromo-body {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title-tabs {
     flex-direction: column;
-    &--type{
+    &--type {
       margin-top: 20px;
     }
   }
@@ -87,14 +93,13 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-content: space-around ;
+      align-content: space-around;
       justify-content: center;
-  
+
       .dealpromo-item {
         width: 90%;
         margin: 20px 0;
-        .dealpromo-item-card{    
-          
+        .dealpromo-item-card {
         }
       }
     }
