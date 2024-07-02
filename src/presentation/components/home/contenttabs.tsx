@@ -6,8 +6,14 @@ const ContentTabHome = () => {
   return (
     <>
       <div className={styleHome["tab-content"]}>
-        <div className={styleHome["dealpromo-body"]}>
-          <div className={styleHome["dealpromo-row"]}>
+        <div className={styleHome["dealpromo-body"]}>          
+        <PromotionCard/>        
+        <PromotionCard/>        
+        <PromotionCard/>        
+        <PromotionCard/>        
+        <PromotionCard/>        
+        <PromotionCard/>
+          {/* <div className={styleHome["dealpromo-row"]}>
             <PromotionCard/>
             <PromotionCard/>
           </div>
@@ -19,7 +25,7 @@ const ContentTabHome = () => {
           <div className={styleHome["dealpromo-row"]}>
             <PromotionCard/>
             <PromotionCard/>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

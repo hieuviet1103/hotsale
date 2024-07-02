@@ -1,4 +1,5 @@
 .main {
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,32 +48,53 @@
   .dealpromo-body {
     margin-top: 30px;
     margin-left: 50px;
-    margin-right: 50px;;
+    margin-right: 50px;
     min-height: 500px;
     background-color: yellow;
     display: flex;
-    flex-direction: column;
-
-    .dealpromo-row {
-      display: flex;
-      flex-direction: row;
-
-      justify-content: space-between;
-
-      margin: 10px;
-      background-color: blue;
-      min-height: 100px;
-
-
-      
-    }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     .dealpromo-item {
-        flex:1;
-        margin: 20px;
+      width: 48%;
+      min-width: 250px;
+      border-radius: 10px;
+      border: solid blue;
+      margin: 5px 0;
+      .dealpromo-item-card{   
+        margin: 20px 10px; 
         min-height: 120px;
         background-color: red;
-        border-radius: 10px;
+        
       }
+    }
+  }
+}
+
+@media screen and (max-width: 600px)  {        
+  .title-tabs{
+    flex-direction: column;
+    &--type{
+      margin-top: 20px;
+    }
+  }
+
+  .tab-content {
+    .dealpromo-body {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-around ;
+      justify-content: center;
+  
+      .dealpromo-item {
+        width: 90%;
+        margin: 20px 0;
+        .dealpromo-item-card{    
+          
+        }
+      }
+    }
   }
 }
