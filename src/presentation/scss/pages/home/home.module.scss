@@ -10,16 +10,6 @@
   border-radius: 10px;
 }
 
-.voucher-dealcoupon {
-  ::before {
-    margin-left: 200px;
-  }
-
-  ::after {
-    margin-right: 200px;
-  }
-}
-
 .title-tabs {
   display: flex;
   justify-content: space-between;
@@ -47,28 +37,129 @@
 .tab-content {
   .dealpromo-body {
     margin-top: 30px;
-    //margin-left: 50px;
-    //margin-right: 50px;
     min-height: 500px;
-    background-color: yellow;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto;
 
     .dealpromo-item {
-      width: 48%;
+      //width: 48%;
       min-width: 250px;
       border-radius: 10px;
       border: solid blue;
-      margin: 5px 0;
+      margin: 5px 10px;
+      padding: 20px;
+
+      position: relative;
+
+      /*Vùng bên trái*/
+      ::before {
+        --circle-width: 40px;
+        content: "";
+        position: absolute;
+        background: transparent;
+        border: solid blue;
+        top: calc(50% - 50px / 2);
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        transform: rotate(225deg);
+      }
+      /*Vùng bên phải*/
+      ::after {
+        content: "";
+        position: absolute;
+        background: transparent;
+        border: solid blue;
+        top: calc(50% - 50px / 2);
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        transform: rotate(-315deg);
+      }
+
+      ::before {
+        left: -30px;
+        transform: rotate(45deg);
+        background: #fff !important;
+      }
+
+      ::after {
+        right: -30px;
+        transform: rotate(-135deg);
+        background: #fff !important;
+      }
+
       .dealpromo-item-card {
         margin: 20px 10px;
         min-height: 120px;
-        background-color: red;
+        //background-color: red;
       }
     }
   }
+
+  // .dealpromo-body {
+  //   margin-top: 30px;
+  //   min-height: 500px;
+  //   //background-color: yellow;
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  //   justify-content: space-around;
+
+  //   .dealpromo-item {
+  //     width: 48%;
+  //     min-width: 250px;
+  //     border-radius: 10px;
+  //     border: solid blue;
+  //     margin: 5px 0;
+
+  //     position: relative;
+
+  //     /*Vùng bên trái*/
+  //     &::before {
+  //       //left: calc(0px - (50px / 2) - 2px);
+  //       --circle-width: 40px;
+  //       content: "";
+  //       position: absolute;
+  //       background: transparent;
+  //       border: 2px solid blue;
+  //       top: calc(50% - 50px / 2);
+  //       height: 50px;
+  //       width: 50px;
+  //       border-radius: 100%;
+  //       border-bottom-color: transparent;
+  //       border-left-color: transparent;
+  //       margin-right: -30px;
+  //       transform: rotate(225deg);
+  //     }
+  //     /*Vùng bên phải*/
+  //     &::after {
+  //       //right: calc(0px - (50px / 2) - 2px);--circle-width: 40px;
+  //       content: "";
+  //       position: absolute;
+  //       background: transparent;
+  //       border: 2px solid blue;
+  //       top: calc(50% - 50px / 2);
+  //       height: 50px;
+  //       width: 50px;
+  //       border-radius: 100%;
+  //       border-bottom-color: transparent;
+  //       border-left-color: transparent;
+  //       margin-left: -30px;
+  //       transform: rotate(-315deg);
+  //     }
+
+  //     .dealpromo-item-card {
+  //       margin: 20px 10px;
+  //       min-height: 120px;
+  //       //background-color: red;
+  //     }
+  //   }
+  // }
 }
 
 @media screen and (min-width: 650px) {
