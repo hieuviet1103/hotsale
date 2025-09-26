@@ -13,19 +13,19 @@ import { Plus } from "lucide-react";
 const mockDeals = [
   {
     id: "1",
-    title: "iPhone 15 Pro Max - Giảm sốc 5 triệu",
-    description: "iPhone 15 Pro Max mới nhất với chip A17 Pro, camera chụp đêm cực đỉnh. Bảo hành chính hãng 12 tháng.",
-    discountPercentage: 20,
-    discountAmount: "5,000,000đ",
-    voucherCode: "IPHONE15PRO",
-    platform: "shopee",
-    category: "ecommerce",
-    originalPrice: "34,990,000đ",
-    discountedPrice: "29,990,000đ",
-    expiresAt: "2024-12-31T23:59:59Z",
+    title: "Du lịch giờ chót Vietravel - giảm đến 40%",
+    description: "Với những giảm giá rất ưu đãi phối hợp với hệ thống đối tác lớn mạnh, Vietravel cho Quý khách cơ hội được tận hưởng những dịch vụ chất lượng vàng không đổi từ công ty lữ hành uy tín nhất Việt Nam.",
+    discountPercentage: 40,
+    discountAmount: "700,000đ",
+    // voucherCode: "VTR",
+    platform: "vietravel",
+    category: "travel",
+    originalPrice: "7.990.000",
+    discountedPrice: "7,290,000đ",
+    expiresAt: "2025-12-31T23:59:59Z",
     isVerified: true,
-    imageUrl: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop",
-    dealUrl: "https://shopee.vn/deal-iphone15"
+    imageUrl: "https://s3-cmc.travel.com.vn/vtv-image/Images/Advertisings/bn_250827_kvthuweb436-327.webp",
+    dealUrl: "https://travel.com.vn/du-lich-gio-chot.aspx?utm_source=masoffer&utm_campaign=t2-DlInw2qsqrfhrWyEmgg&ref=masoffer&traffic_id=66c01e947286d700015cff09"
   },
   {
     id: "2", 

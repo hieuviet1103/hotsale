@@ -1,13 +1,24 @@
 # Deployment Guide
 
-## Vercel Deployment
+## Vercel Deployment - FIXED ✅
 
 ### 1. Cấu hình đã được thiết lập:
-- ✅ `vercel.json` - Cấu hình Vercel
-- ✅ `package.json` - Scripts cho build và start
-- ✅ Server config - Serve static files từ `dist/public`
+- ✅ `vercel.json` - Cấu hình Vercel với API routes
+- ✅ `api/index.js` - Vercel serverless function
+- ✅ Static files được serve từ `dist/public`
 
-### 2. Deploy lên Vercel:
+### 2. Cấu trúc mới:
+```
+hotsale/
+├── api/
+│   └── index.js          # Vercel serverless function
+├── dist/
+│   └── public/           # Built static files
+├── vercel.json           # Vercel config
+└── package.json
+```
+
+### 3. Deploy lên Vercel:
 
 ```bash
 # Install Vercel CLI
@@ -23,17 +34,33 @@ vercel
 vercel --prod
 ```
 
-### 3. Environment Variables trên Vercel:
-- `NODE_ENV=production` (đã được set trong vercel.json)
-- `PORT` sẽ được Vercel tự động set
+### 4. Cách hoạt động:
+1. **Build:** Vercel chạy `npm run build` → tạo `dist/public/`
+2. **API:** Tất cả requests → `/api/index.js`
+3. **Static:** API serve static files từ `dist/public/`
+4. **SPA:** Fallback về `index.html` cho client-side routing
 
-### 4. Build Process:
-1. Vercel sẽ chạy `npm run build`
-2. Build client với Vite → `dist/public/`
-3. Build server với esbuild → `dist/index.js`
-4. Deploy `dist/index.js` như serverless function
+### 5. Test local:
+```bash
+# Build trước
+npm run build
 
-### 5. Troubleshooting:
-- Nếu thấy source code thay vì app: Kiểm tra `vercel.json` và build process
-- Nếu lỗi static files: Đảm bảo `dist/public` tồn tại sau build
-- Nếu lỗi server: Kiểm tra `dist/index.js` có được build đúng không
+# Test API
+node api/index.js
+# Server chạy trên http://localhost:3000
+```
+
+### 6. Troubleshooting:
+- ✅ **500 Error:** Đã fix bằng cách tạo `api/index.js`
+- ✅ **Static files:** Serve từ `dist/public/`
+- ✅ **SPA routing:** Fallback về `index.html`
+- ✅ **ES Modules:** Sử dụng `import/export`
+
+### 7. Lưu ý:
+- Mỗi khi sửa code, cần chạy `npm run build` trước khi deploy
+- API function sẽ tự động serve cả static files và handle routing
+
+
+# Mỗi khi sửa code, chạy:
+npm run build
+vercel --prod

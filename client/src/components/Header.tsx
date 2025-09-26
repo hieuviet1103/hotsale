@@ -62,7 +62,7 @@ export default function Header({ onSearchChange, onCategorySelect, activeCategor
               <Gift className="w-5 h-5 text-white" />
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              DealShare
+              HotSale
             </h1>
           </div>
 
@@ -102,13 +102,13 @@ export default function Header({ onSearchChange, onCategorySelect, activeCategor
               </Badge>
             </Button>
 
-            <Button
+            {/* <Button
               onClick={() => console.log('Add deal clicked')}
               data-testid="button-add-deal"
             >
               <Plus className="w-4 h-4 mr-2" />
               Thêm Deal
-            </Button>
+            </Button> */}
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

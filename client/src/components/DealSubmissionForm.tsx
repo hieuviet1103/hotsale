@@ -121,6 +121,8 @@ export default function DealSubmissionForm({ onSubmit, onClose }: DealSubmission
                   <SelectItem value="restaurant">Nhà hàng</SelectItem>
                   <SelectItem value="flight">Vé máy bay</SelectItem>
                   <SelectItem value="hotel">Khách sạn</SelectItem>
+                  <SelectItem value="travel">Vietravel</SelectItem>
+                  <SelectItem value="other">Khác</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -136,6 +138,7 @@ export default function DealSubmissionForm({ onSubmit, onClose }: DealSubmission
                   <SelectItem value="restaurant">Nhà hàng</SelectItem>
                   <SelectItem value="travel">Du lịch</SelectItem>
                   <SelectItem value="entertainment">Giải trí</SelectItem>
+                  <SelectItem value="other">Khác</SelectItem>
                 </SelectContent>
               </Select>
             </div>

@@ -27,14 +27,16 @@ const platformColors = {
   tiktok_shop: "bg-black",
   restaurant: "bg-green-500",
   flight: "bg-sky-500",
-  hotel: "bg-purple-500"
+  hotel: "bg-purple-500",
+  vietravel: "bg-sky-500"
 };
 
 const categoryColors = {
   ecommerce: "bg-orange-100 text-orange-800",
   restaurant: "bg-green-100 text-green-800", 
   travel: "bg-blue-100 text-blue-800",
-  entertainment: "bg-purple-100 text-purple-800"
+  entertainment: "bg-purple-100 text-purple-800",
+  vietravel: "bg-sky-100 text-sky-800"
 };
 
 export default function DealCard(props: DealCardProps) {
