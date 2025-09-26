@@ -13,7 +13,7 @@ import { Plus } from "lucide-react";
 const mockDeals = [
   {
     id: "1",
-    title: "Du lịch giờ chót Vietravel - giảm đến 40%",
+    title: "Du lịch giờ chót Vietravel - giảm đến 4 triệu đồng",
     description: "Với những giảm giá rất ưu đãi phối hợp với hệ thống đối tác lớn mạnh, Vietravel cho Quý khách cơ hội được tận hưởng những dịch vụ chất lượng vàng không đổi từ công ty lữ hành uy tín nhất Việt Nam.",
     discountPercentage: 40,
     discountAmount: "700,000đ",

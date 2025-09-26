@@ -116,7 +116,7 @@ export default function DealCard(props: DealCardProps) {
               </span>
             )}
             {props.discountedPrice && (
-              <span className="text-lg font-bold text-primary" data-testid={`text-price-${props.id}`}>
+              <span className="text-lg font-bold text-red-500" data-testid={`text-price-${props.id}`}>
                 {props.discountedPrice}
               </span>
             )}
